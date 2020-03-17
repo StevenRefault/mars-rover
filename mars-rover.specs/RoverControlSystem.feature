@@ -5,8 +5,10 @@
 
 Background: 
 	Given I'm a shiny new Mars Rover with immaculate paintwork
-
-
+		
+		
 Scenario: A new rover has no scuffs to its paintwork
-	When I start my journey
+	When I start my journey at this location
+		| X | Y | Direction |
+		| 0 | 0 | E         |
 	Then I should have 0 scuffs

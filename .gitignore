@@ -1,0 +1,11 @@
+
+.vs/mars-rover/v16/
+/mars-rover.specs/bin
+/mars-rover.specs/obj
+/mars-rover/obj
+
+*.ncrunchsolution
+
+*.user
+
+mars-rover/bin/Debug/netcoreapp3.1/

@@ -1,27 +1,38 @@
-﻿using System;
+﻿using System.Drawing;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+using Xunit;
 
 namespace mars_rover.specs
 {
     [Binding]
     public class RoverControlSystemSteps
     {
-        [Given(@"I'm a shiny new Mars Rover with immaculate paintwork")]
-        public void GivenIMAShinyNewMarsRoverWithImmaculatePaintwork()
+        private readonly RoverControlSystemStepsContext _context;
+        private readonly Rover _rover;
+
+        public RoverControlSystemSteps(RoverControlSystemStepsContext context)
         {
-            ScenarioContext.Current.Pending();
+            _context = context;
+            _rover = context.Rover;
         }
-        
-        [When(@"I start my journey")]
-        public void WhenIStartMyJourney()
+
+        [When(@"I start my journey at this location")]
+        public void WhenIStartMyJourneyAtThisLocation(Table table)
         {
-            ScenarioContext.Current.Pending();
+            dynamic startingLocation = table.CreateDynamicInstance();
+
+            _rover.Location = new Location
+            {
+                Point = new Point(startingLocation.X, startingLocation.Y),
+                Direction = startingLocation.Direction
+            };
         }
-        
+
         [Then(@"I should have (.*) scuffs")]
-        public void ThenIShouldHaveScuffs(int p0)
+        public void ThenIShouldHaveScuffs(int scuffs)
         {
-            ScenarioContext.Current.Pending();
+            Assert.Equal(scuffs, _rover.Scuffs);
         }
     }
 }

@@ -121,10 +121,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 6
 this.FeatureBackground();
 #line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table1.AddRow(new string[] {
+                            "0",
+                            "0",
+                            "E"});
 #line 11
- testRunner.When("I start my journey", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I start my journey at this location", ((string)(null)), table1, "When ");
 #line hidden
-#line 12
+#line 14
  testRunner.Then("I should have 0 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
