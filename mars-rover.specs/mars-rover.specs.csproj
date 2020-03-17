@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>mars_rover.specs</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SpecFlow" Version="3.1.89" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.1.89" />
+    <PackageReference Include="SpecFlow.xUnit" Version="3.1.89" />
+  </ItemGroup>
+
+</Project>
