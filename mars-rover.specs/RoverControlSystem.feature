@@ -12,3 +12,64 @@ Scenario: A new rover has no scuffs to its paintwork
 		| X | Y | Direction |
 		| 0 | 0 | E         |
 	Then I should have 0 scuffs
+
+Scenario: 
+	When I start my journey at this location
+		| X | Y | Direction |
+		| 0 | 2 | E         |
+
+		And I make the following moves
+			| Moves        |
+			| FLFRFFFRFFRR |
+			
+	Then My final position will be 
+		| X | Y | Direction |
+		| 4 | 1 | N         |
+		And I should have 0 scuffs 
+
+Scenario: 
+
+	When I start my journey at this location
+		| X | Y | Direction |
+		| 4 | 4 | S         |
+
+	And I make the following moves
+		| Moves         |
+		| LFLLFFLFFFRFF |
+			
+	Then My final position will be 
+		| X | Y | Direction |
+		| 0 | 1 | W         |
+		And I should have 1 scuffs 
+
+Scenario: 
+
+	When I start my journey at this location
+		| X | Y | Direction |
+		| 2 | 2 | W         |
+
+	And I make the following moves
+		| Moves           |
+		| FLFLFLFRFRFRFRF |
+			
+	Then My final position will be 
+		| X | Y | Direction |
+		| 2 | 2 | N         |
+		And I should have 0 scuffs 
+
+Scenario: 
+
+	When I start my journey at this location
+		| X | Y | Direction |
+		| 1 | 3 | N         |
+
+	And I make the following moves
+		| Moves           |
+		| FFLFFLFFFFF     |
+			
+	Then My final position will be 
+		| X | Y | Direction |
+		| 0 | 0 | S         |
+		And I should have 3 scuffs 
+
+	
