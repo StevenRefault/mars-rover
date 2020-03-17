@@ -17,7 +17,7 @@ namespace mars_rover.specs
             _rover = context.Rover;
         }
 
-        [When(@"I start my journey at this location")]
+        [When(@"I start my journey at this location +.*")]
         public void WhenIStartMyJourneyAtThisLocation(Table table)
         {
             dynamic startingLocation = table.CreateDynamicInstance();
@@ -30,7 +30,7 @@ namespace mars_rover.specs
         }
 
         [Then(@"I should have (.*) scuffs")]
-        public void ThenIShouldHaveScuffs(int scuffs)
+        public void ThenIShouldHaveThisManyScuffs(int scuffs)
         {
             Assert.Equal(scuffs, _rover.Scuffs);
         }

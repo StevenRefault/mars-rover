@@ -8,13 +8,13 @@ Background:
 		
 		
 Scenario: A new rover has no scuffs to its paintwork
-	When I start my journey at this location
+	When I start my journey at this location 0,0,E
 		| X | Y | Direction |
 		| 0 | 0 | E         |
 	Then I should have 0 scuffs
 
 Scenario: 
-	When I start my journey at this location
+	When I start my journey at this location 0,2,E
 		| X | Y | Direction |
 		| 0 | 2 | E         |
 
@@ -29,7 +29,7 @@ Scenario:
 
 Scenario: 
 
-	When I start my journey at this location
+	When I start my journey at this location 4,4,S
 		| X | Y | Direction |
 		| 4 | 4 | S         |
 
@@ -44,7 +44,7 @@ Scenario:
 
 Scenario: 
 
-	When I start my journey at this location
+	When I start my journey at this location 2,2,W
 		| X | Y | Direction |
 		| 2 | 2 | W         |
 
@@ -59,7 +59,7 @@ Scenario:
 
 Scenario: 
 
-	When I start my journey at this location
+	When I start my journey at this location 1,3,N
 		| X | Y | Direction |
 		| 1 | 3 | N         |
 
