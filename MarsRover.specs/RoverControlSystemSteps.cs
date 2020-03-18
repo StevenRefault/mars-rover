@@ -27,10 +27,9 @@ namespace MarsRover.specs
             _rover.Location = new Location
             {
                 Point = new Point(startingLocation.X, startingLocation.Y),
-                Direction = startingLocation.Direction
+                Direction = ConvertDirectionToEnum(startingLocation.Direction)
             };
         }
-
 
         [Then(@"I should be in a (.*) x (.*) crater")]
         public void ThenIShouldBeInAXByYCrater(int x, int y)
@@ -65,7 +64,16 @@ namespace MarsRover.specs
 
             Assert.Equal(finalLocation.X, _rover.Location.Point.X);
             Assert.Equal(finalLocation.Y, _rover.Location.Point.Y);
-            Assert.Equal(finalLocation.Direction, _rover.Location.Direction);
+            Assert.Equal(ConvertDirectionToEnum(finalLocation.Direction), _rover.Location.Direction);
+        }
+
+
+        private static Direction ConvertDirectionToEnum(dynamic direction)
+        {
+            if (direction == "N") return Direction.North;
+            if (direction == "E") return Direction.East;
+            if (direction == "S") return Direction.South;
+            return Direction.West;
         }
     }
 }

@@ -6,27 +6,27 @@ namespace MarsRover.Commands
     {
         public Rover PerformMovement(Rover rover, Crater? crater = null)
         {
-            if (rover.Location.Direction == "N")
+            if (rover.Location.Direction == Direction.North)
             {
-                rover.Location.Direction = "E";
+                rover.Location.Direction = Direction.East;
                 return rover;
             }
 
-            if (rover.Location.Direction == "E")
+            if (rover.Location.Direction == Direction.East)
             {
-                rover.Location.Direction = "S";
+                rover.Location.Direction = Direction.South;
                 return rover;
             }
 
-            if (rover.Location.Direction == "S")
+            if (rover.Location.Direction == Direction.South)
             {
-                rover.Location.Direction = "W";
+                rover.Location.Direction = Direction.West;
                 return rover;
             }
 
-            if (rover.Location.Direction == "W")
+            if (rover.Location.Direction == Direction.West)
             {
-                rover.Location.Direction = "N";
+                rover.Location.Direction = Direction.North;
                 return rover;
             }
 
