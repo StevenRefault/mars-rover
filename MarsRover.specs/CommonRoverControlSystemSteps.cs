@@ -23,6 +23,7 @@ namespace MarsRover.specs
         [Given(@"I'm in a (.*) x (.*) crater")]
         public void GivenImInAXByYCrater(int x, int y)
         {
+            // coordinates start from zero, hence -1
             _context.Crater = new Crater
             {
                 Width = x - 1,

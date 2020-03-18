@@ -4,7 +4,7 @@ namespace MarsRover.Commands
 {
     public class MoveLeft : IMovementCommand
     {
-        public Rover PerformMovement(Rover rover, Crater crater = null)
+        public Rover PerformMovement(Rover rover, Crater? crater = null)
         {
             if (rover.Location.Direction == "N")
             {

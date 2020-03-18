@@ -5,12 +5,17 @@ namespace MarsRover.Commands
 {
     public class MoveForward : IMovementCommand
     {
-        public Rover PerformMovement(Rover rover, Crater crater)
+        public Rover PerformMovement(Rover rover, Crater? crater)
         {
-            return AttemptToMove(rover, crater);
+            if (crater != null)
+            {
+                return AttemptToMove(rover, crater);
+            }
+
+            return rover;
         }
 
-        private Rover AttemptToMove(Rover rover, Crater crater)
+        private static Rover AttemptToMove(Rover rover, Crater crater)
         {
             if (rover.Location.Direction == "E" && rover.Location.Point.X == crater.Width
                 || rover.Location.Direction == "W" && rover.Location.Point.X == 0

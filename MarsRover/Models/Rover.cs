@@ -4,7 +4,7 @@ namespace MarsRover.Models
 {
     public class Rover
     {
-        public Location Location { get; set; }
+        public Location Location { get; set; } = new Location();
 
         public int Scuffs { get; set; }
     }
@@ -12,6 +12,7 @@ namespace MarsRover.Models
     public class Location
     {
         public Point Point { get; set; }
-        public string Direction { get; set; }
+
+        public string? Direction { get; set; }
     }
 }

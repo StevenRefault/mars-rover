@@ -1,17 +1,12 @@
-
-.vs/mars-rover/v16/
-/mars-rover.specs/bin
-/mars-rover.specs/obj
-/mars-rover/obj
-
 *.ncrunchsolution
 
 *.user
 
-mars-rover/bin/Debug/netcoreapp3.1/
 /.vs/MarsRover/v16
 /MarsRover/bin/Debug/netcoreapp3.1
 /MarsRover/obj
 /MarsRover.specs/bin/Debug/netcoreapp3.1
 /MarsRover.specs/obj
 /_NCrunch_mars-rover
+/MarsRover/.vs/
+/.vs/mars-rover/v16/TestStore/0
