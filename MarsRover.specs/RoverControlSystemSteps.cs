@@ -50,7 +50,7 @@ namespace MarsRover.specs
         public void WhenIMakeTheFollowingMoves(Table table)
         {
             dynamic moveTable = table.CreateDynamicInstance();
-            var commands = (moveTable.Moves as string).Split(',');
+            var commands = (moveTable.Moves as string)?.Split(',');
 
             var movementProcessor = new MovementProcessor(_rover, commands, _context.Crater);
             movementProcessor.Move();

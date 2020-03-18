@@ -7,12 +7,7 @@ namespace MarsRover.Commands
     {
         public Rover PerformMovement(Rover rover, Crater? crater)
         {
-            if (crater != null)
-            {
-                return AttemptToMove(rover, crater);
-            }
-
-            return rover;
+            return crater != null ? AttemptToMove(rover, crater) : rover;
         }
 
         private static Rover AttemptToMove(Rover rover, Crater crater)

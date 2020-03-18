@@ -24,12 +24,7 @@ namespace MarsRover.Commands
                 return rover;
             }
 
-            if (rover.Location.Direction == Direction.West)
-            {
-                rover.Location.Direction = Direction.North;
-                return rover;
-            }
-
+            rover.Location.Direction = Direction.North;
             return rover;
         }
     }
