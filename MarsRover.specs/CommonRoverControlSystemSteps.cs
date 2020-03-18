@@ -1,7 +1,8 @@
-﻿using System.Drawing;
+﻿using MarsRover.Models;
+using System.Drawing;
 using TechTalk.SpecFlow;
 
-namespace mars_rover.specs
+namespace MarsRover.specs
 {
     [Binding]
     public class CommonRoverControlSystemSteps
@@ -19,13 +20,13 @@ namespace mars_rover.specs
             _context.Rover = new Rover();
         }
 
-        [Given(@"I'm in a (.*) x (.*) Crater")]
+        [Given(@"I'm in a (.*) x (.*) crater")]
         public void GivenImInAXByYCrater(int x, int y)
         {
             _context.Crater = new Crater
             {
-                Width = x,
-                Height = y
+                Width = x - 1,
+                Height = y - 1
             };
         }
 

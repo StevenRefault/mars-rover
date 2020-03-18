@@ -1,4 +1,6 @@
-﻿namespace mars_rover.specs
+﻿using MarsRover.Models;
+
+namespace MarsRover.specs
 {
     public class RoverControlSystemStepsContext
     {

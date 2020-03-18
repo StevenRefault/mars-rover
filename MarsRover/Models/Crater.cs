@@ -1,4 +1,4 @@
-﻿namespace mars_rover
+﻿namespace MarsRover.Models
 {
     public class Crater
     {

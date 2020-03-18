@@ -9,3 +9,9 @@
 *.user
 
 mars-rover/bin/Debug/netcoreapp3.1/
+/.vs/MarsRover/v16
+/MarsRover/bin/Debug/netcoreapp3.1
+/MarsRover/obj
+/MarsRover.specs/bin/Debug/netcoreapp3.1
+/MarsRover.specs/obj
+/_NCrunch_mars-rover
