@@ -5,6 +5,7 @@
 
 Background: 
 	Given I'm a shiny new Mars Rover with immaculate paintwork
+		And I'm in a 5 x 5 Crater
 		
 		
 Scenario: A new rover has no scuffs to its paintwork
@@ -13,7 +14,7 @@ Scenario: A new rover has no scuffs to its paintwork
 		| 0 | 0 | E         |
 	Then I should have 0 scuffs
 
-Scenario: 
+Scenario: Start at location 0,2 facing East
 	When I start my journey at this location 0,2,E
 		| X | Y | Direction |
 		| 0 | 2 | E         |
@@ -27,7 +28,7 @@ Scenario:
 		| 4 | 1 | N         |
 		And I should have 0 scuffs 
 
-Scenario: 
+Scenario: Start at location 4,4 facing South
 
 	When I start my journey at this location 4,4,S
 		| X | Y | Direction |
@@ -42,7 +43,7 @@ Scenario:
 		| 0 | 1 | W         |
 		And I should have 1 scuffs 
 
-Scenario: 
+Scenario: Start at location 2,2, facing west
 
 	When I start my journey at this location 2,2,W
 		| X | Y | Direction |
@@ -57,7 +58,7 @@ Scenario:
 		| 2 | 2 | N         |
 		And I should have 0 scuffs 
 
-Scenario: 
+Scenario: Start at location 1,3, facing north
 
 	When I start my journey at this location 1,3,N
 		| X | Y | Direction |

@@ -84,6 +84,9 @@ namespace mars_rover.specs
 #line 7
  testRunner.Given("I\'m a shiny new Mars Rover with immaculate paintwork", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 8
+  testRunner.And("I\'m in a 5 x 5 Crater", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
         }
         
         void System.IDisposable.Dispose()
@@ -98,7 +101,7 @@ namespace mars_rover.specs
         {
             string[] tagsOfScenario = ((string[])(null));
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A new rover has no scuffs to its paintwork", null, ((string[])(null)));
-#line 10
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -129,11 +132,275 @@ this.FeatureBackground();
                             "0",
                             "0",
                             "E"});
-#line 11
- testRunner.When("I start my journey at this location", ((string)(null)), table1, "When ");
+#line 12
+ testRunner.When("I start my journey at this location 0,0,E", ((string)(null)), table1, "When ");
 #line hidden
-#line 14
+#line 15
  testRunner.Then("I should have 0 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Start at location 0,2 facing East")]
+        [Xunit.TraitAttribute("FeatureTitle", "RoverControlSystem")]
+        [Xunit.TraitAttribute("Description", "Start at location 0,2 facing East")]
+        public virtual void StartAtLocation02FacingEast()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start at location 0,2 facing East", null, ((string[])(null)));
+#line 17
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table2.AddRow(new string[] {
+                            "0",
+                            "2",
+                            "E"});
+#line 18
+ testRunner.When("I start my journey at this location 0,2,E", ((string)(null)), table2, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Moves"});
+                table3.AddRow(new string[] {
+                            "FLFRFFFRFFRR"});
+#line 22
+  testRunner.And("I make the following moves", ((string)(null)), table3, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table4.AddRow(new string[] {
+                            "4",
+                            "1",
+                            "N"});
+#line 26
+ testRunner.Then("My final position will be", ((string)(null)), table4, "Then ");
+#line hidden
+#line 29
+  testRunner.And("I should have 0 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Start at location 4,4 facing South")]
+        [Xunit.TraitAttribute("FeatureTitle", "RoverControlSystem")]
+        [Xunit.TraitAttribute("Description", "Start at location 4,4 facing South")]
+        public virtual void StartAtLocation44FacingSouth()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start at location 4,4 facing South", null, ((string[])(null)));
+#line 31
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table5.AddRow(new string[] {
+                            "4",
+                            "4",
+                            "S"});
+#line 33
+ testRunner.When("I start my journey at this location 4,4,S", ((string)(null)), table5, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Moves"});
+                table6.AddRow(new string[] {
+                            "LFLLFFLFFFRFF"});
+#line 37
+ testRunner.And("I make the following moves", ((string)(null)), table6, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table7.AddRow(new string[] {
+                            "0",
+                            "1",
+                            "W"});
+#line 41
+ testRunner.Then("My final position will be", ((string)(null)), table7, "Then ");
+#line hidden
+#line 44
+  testRunner.And("I should have 1 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Start at location 2,2, facing west")]
+        [Xunit.TraitAttribute("FeatureTitle", "RoverControlSystem")]
+        [Xunit.TraitAttribute("Description", "Start at location 2,2, facing west")]
+        public virtual void StartAtLocation22FacingWest()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start at location 2,2, facing west", null, ((string[])(null)));
+#line 46
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table8.AddRow(new string[] {
+                            "2",
+                            "2",
+                            "W"});
+#line 48
+ testRunner.When("I start my journey at this location 2,2,W", ((string)(null)), table8, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Moves"});
+                table9.AddRow(new string[] {
+                            "FLFLFLFRFRFRFRF"});
+#line 52
+ testRunner.And("I make the following moves", ((string)(null)), table9, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table10.AddRow(new string[] {
+                            "2",
+                            "2",
+                            "N"});
+#line 56
+ testRunner.Then("My final position will be", ((string)(null)), table10, "Then ");
+#line hidden
+#line 59
+  testRunner.And("I should have 0 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Start at location 1,3, facing north")]
+        [Xunit.TraitAttribute("FeatureTitle", "RoverControlSystem")]
+        [Xunit.TraitAttribute("Description", "Start at location 1,3, facing north")]
+        public virtual void StartAtLocation13FacingNorth()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Start at location 1,3, facing north", null, ((string[])(null)));
+#line 61
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table11.AddRow(new string[] {
+                            "1",
+                            "3",
+                            "N"});
+#line 63
+ testRunner.When("I start my journey at this location 1,3,N", ((string)(null)), table11, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Moves"});
+                table12.AddRow(new string[] {
+                            "FFLFFLFFFFF"});
+#line 67
+ testRunner.And("I make the following moves", ((string)(null)), table12, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                            "X",
+                            "Y",
+                            "Direction"});
+                table13.AddRow(new string[] {
+                            "0",
+                            "0",
+                            "S"});
+#line 71
+ testRunner.Then("My final position will be", ((string)(null)), table13, "Then ");
+#line hidden
+#line 74
+  testRunner.And("I should have 3 scuffs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

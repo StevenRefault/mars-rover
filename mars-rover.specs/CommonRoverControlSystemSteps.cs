@@ -19,6 +19,16 @@ namespace mars_rover.specs
             _context.Rover = new Rover();
         }
 
+        [Given(@"I'm in a (.*) x (.*) Crater")]
+        public void GivenImInAXByYCrater(int x, int y)
+        {
+            _context.Crater = new Crater
+            {
+                Width = x,
+                Height = y
+            };
+        }
+
         [StepArgumentTransformation(@"at (\d+),(\d+) location")]
         public void PointTransformation(int x, int y) => new Point(x, y);
 
