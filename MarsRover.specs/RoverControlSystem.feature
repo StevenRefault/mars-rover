@@ -7,7 +7,7 @@ Background:
 	Given I'm a shiny new Mars Rover with immaculate paintwork
 		And I'm in a 5 x 5 crater
 		
-###  Initialisation tests		
+###  Starting condition tests		
 Scenario: A new rover has no scuffs to its paintwork
 	When I start my journey at this location 0,0,E
 		| X | Y | Direction |
@@ -20,7 +20,7 @@ Scenario: A crater is created of the correct size
 		| 0 | 0 | E         |
 	Then I should be in a 5 x 5 crater
 
-### Initialisation tests end
+### Starting condition tests end
 
 
 

@@ -1,4 +1,5 @@
 ﻿using MarsRover.Models;
+using System.Diagnostics;
 
 namespace MarsRover.Commands
 {
@@ -35,6 +36,10 @@ namespace MarsRover.Commands
                 {
                     _rover = _movement.MoveForward.PerformMovement(_rover, _crater);
                 }
+
+#if DEBUG
+                Debug.WriteLine($"Rover is at {_rover.Location.Point.X}, {_rover.Location.Point.Y} facing {_rover.Location.Direction}");
+#endif
             }
         }
     }

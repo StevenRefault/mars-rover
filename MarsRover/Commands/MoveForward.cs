@@ -13,7 +13,7 @@ namespace MarsRover.Commands
         private static Rover AttemptToMove(Rover rover, Crater crater)
         {
             if (rover.Location.Direction == Direction.East && rover.Location.Point.X == crater.Width
-                || rover.Location.Direction == Direction.West && rover.Location.Point.X == 0
+                || rover.Location.Direction == Direction.West && rover.Location.Point.X == 0  // zero being coordinate boundary
                 || rover.Location.Direction == Direction.South && rover.Location.Point.Y == 0
                 || rover.Location.Direction == Direction.North && rover.Location.Point.Y == crater.Height)
             {

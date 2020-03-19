@@ -1,5 +1,4 @@
 ﻿using MarsRover.Models;
-using System.Drawing;
 using TechTalk.SpecFlow;
 
 namespace MarsRover.specs
@@ -30,9 +29,5 @@ namespace MarsRover.specs
                 Height = y - 1
             };
         }
-
-        [StepArgumentTransformation(@"at (\d+),(\d+) location")]
-        public void PointTransformation(int x, int y) => new Point(x, y);
-
     }
 }

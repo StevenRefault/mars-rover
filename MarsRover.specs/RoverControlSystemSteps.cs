@@ -38,13 +38,11 @@ namespace MarsRover.specs
             Assert.Equal(y - 1, _context.Crater.Height);
         }
 
-
         [Then(@"I should have (.*) scuffs")]
         public void ThenIShouldHaveThisManyScuffs(int scuffs)
         {
             Assert.Equal(scuffs, _rover.Scuffs);
         }
-
 
         [When(@"I make the following moves")]
         public void WhenIMakeTheFollowingMoves(Table table)
@@ -54,7 +52,6 @@ namespace MarsRover.specs
 
             var movementProcessor = new MovementProcessor(_rover, commands, _context.Crater);
             movementProcessor.Move();
-
         }
 
         [Then(@"My final position will be")]
@@ -66,7 +63,6 @@ namespace MarsRover.specs
             Assert.Equal(finalLocation.Y, _rover.Location.Point.Y);
             Assert.Equal(ConvertDirectionToEnum(finalLocation.Direction), _rover.Location.Direction);
         }
-
 
         private static Direction ConvertDirectionToEnum(dynamic direction)
         {
